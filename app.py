@@ -6,8 +6,8 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 
 # Configuración de OAuth
-CLIENT_ID = "675272352047-kg7hipc900n6bhn0b69150ib873t8soh.apps.googleusercontent.com"
-CLIENT_SECRET = "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"
+CLIENT_ID = "aqui la cadena de caracteres que te da google"
+CLIENT_SECRET = "AQUI LA CADENA DE CARACTERES QUE TE DA GOOGLE"
 AUTHORIZATION_BASE_URL = "https://accounts.google.com/o/oauth2/auth"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 REDIRECT_URI = "http://localhost:5000/callback"
