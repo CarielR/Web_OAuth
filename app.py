@@ -39,13 +39,13 @@ def callback():
 
 @app.route("/profile")
 def profile():
-    if "oauth_token" not in session:  # Verificar si el usuario está autenticado
+    if "oauth_token" not in session:
         return redirect(url_for("index"))
 
     google = OAuth2Session(CLIENT_ID, token=session["oauth_token"])
-    user_info = google.get("https://www.googleapis.com/oauth2/v1/userinfo").json()
-    return render_template("profile.html", user=user_info)
+    user_info = google.get("https://www.googleapis.com/oauth2/v1/userinfo?alt=json").json()
 
+    return render_template("profile.html", user=user_info)
 @app.route("/logout")
 def logout():
     session.clear()
